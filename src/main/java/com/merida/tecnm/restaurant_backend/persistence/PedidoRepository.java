@@ -45,4 +45,9 @@ public class PedidoRepository implements OrderRepository {
         }
         return mapper.toOrder(pedidoCrudRepository.save(pedido));
     }
+
+    @Override
+    public void delete(int orderId) {
+        pedidoCrudRepository.deleteById(orderId);
+    }
 }

@@ -9,4 +9,5 @@ public interface OrderRepository {
     Optional<List<Order>> getByClient(String clientId);
     Optional<Order> getOrder(int orderId);
     Order save(Order order);
+    void delete(int orderId);
 }
